@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+title: "Context Grounding: pre-registered measurement of whether retrieved context governs model behavior"
+message: "If you use this work, please cite it."
+type: dataset
+authors:
+  - family-names: Sutherland
+    given-names: Garret
+    affiliation: MirrorEthic LLC
+version: 0.1-interim
+date-released: 2026-07-18
+url: "https://github.com/MirrorEthic/context-grounding"
+keywords: [context grounding, temporal grounding, LLM evaluation, pre-registration, retrieval, agent memory]

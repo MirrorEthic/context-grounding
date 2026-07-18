@@ -1,0 +1,47 @@
+{
+  "n_per_condition": 150,
+  "mdd_pp": 16.2,
+  "call_failures": 0,
+  "parse_fail_pct": 0.0,
+  "A": {
+    "q2": {
+      "correct": 0.0,
+      "unknown": 0.0,
+      "note_verbatim": 100.0,
+      "anchor_consistent": 0.0,
+      "other_wrong": 0.0
+    },
+    "q2_error": 100.0,
+    "q1_tick_accuracy": 16.0
+  },
+  "B": {
+    "q2": {
+      "correct": 100.0,
+      "unknown": 0.0,
+      "note_verbatim": 0.0,
+      "anchor_consistent": 0.0,
+      "other_wrong": 0.0
+    },
+    "q2_error": 0.0,
+    "q1_tick_accuracy": 100.0
+  },
+  "C": {
+    "q2": {
+      "correct": 7.3,
+      "unknown": 0.0,
+      "note_verbatim": 0.7,
+      "anchor_consistent": 65.3,
+      "other_wrong": 26.7
+    },
+    "q2_error": 92.7,
+    "q1_tick_accuracy": 100.0
+  },
+  "ambient_pull": {
+    "p_night_given_day_high": 10.5,
+    "p_night_given_day_low": 0.0
+  },
+  "verdicts": {
+    "V1": "ANCHORS READ (E1-E3 not theater)",
+    "V2": "E1-E4 VALIDATED (error drop 100.0pp >= MDD 16.2pp)"
+  }
+}

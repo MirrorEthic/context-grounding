@@ -1,0 +1,27 @@
+{
+  "n_per_family": 150,
+  "model": "grok-4.20-0309-non-reasoning",
+  "seed": 20260718,
+  "spec": "INGEST_ANNOTATION_PROBE (arm 2)",
+  "registry_hash": "c6c0f9cfff02b9bfd1cfcae4b6dd7e6fe50a0406fa1fb296d382629fd0524352",
+  "content_hashes": {
+    "crypto_bitcoin/datasets/crypto_bitcoin.md": "756a967a67d53f111ba8c9948a762ed8341d8c2d018ba31b84cc35b134172e2a",
+    "crypto_bitcoin/index.md": "d8976586b989408aa16c5805c63415d4ad1533d0304b5a7c629ed91b4cf59143",
+    "crypto_bitcoin/tables/transactions.md": "43ed4ae49c52a81fbf60f8a128a94106ff2fa9c01281aede992bda309a273487",
+    "ga4/datasets/ga4_obfuscated_sample_ecommerce.md": "f6e101bcb8612b395508b06da1196c6345939cdadac25ec8f7e513326146ee82",
+    "ga4/tables/events_.md": "3784045fc51ba101cbc0648596ab4f6f1f94ba68c58c4bd57241fa79e300966c",
+    "stackoverflow/datasets/stackoverflow.md": "5a75ba7b7f6cbb2034abf4f0436185584857ea949eab991de9cc67e64a115355"
+  },
+  "source_realism_counts": {
+    "P1": {
+      "real_derived": 88,
+      "synthetic": 62
+    },
+    "P2": {
+      "real_derived": 95,
+      "synthetic": 55
+    }
+  },
+  "invariants_checked": true,
+  "started": "2026-07-17T17:36:38.668855-06:00"
+}

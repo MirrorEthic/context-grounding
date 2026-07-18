@@ -1,0 +1,108 @@
+{
+  "n_per_cell": 150,
+  "mdd_pp": 16.2,
+  "call_failures": 0,
+  "P1": {
+    "A": {
+      "stale_as_current": 58.0,
+      "unsupported_negation": 0.0,
+      "sanctioned_uncertainty": 42.0,
+      "unparseable": 0.0,
+      "parse_fail_pct": 0.0,
+      "m1_stale_as_current": 58.0,
+      "p1_error": 58.0,
+      "asof_correct": 75.3
+    },
+    "B": {
+      "stale_as_current": 30.7,
+      "unsupported_negation": 0.0,
+      "sanctioned_uncertainty": 69.3,
+      "unparseable": 0.0,
+      "parse_fail_pct": 0.0,
+      "m1_stale_as_current": 30.7,
+      "p1_error": 30.7,
+      "asof_correct": 90.7
+    },
+    "Bx": {
+      "stale_as_current": 55.3,
+      "unsupported_negation": 0.0,
+      "sanctioned_uncertainty": 44.7,
+      "unparseable": 0.0,
+      "parse_fail_pct": 0.0,
+      "m1_stale_as_current": 55.3,
+      "p1_error": 55.3,
+      "asof_correct": 16.7
+    },
+    "C": {
+      "stale_as_current": 0.0,
+      "unsupported_negation": 0.0,
+      "sanctioned_uncertainty": 100.0,
+      "unparseable": 0.0,
+      "parse_fail_pct": 0.0,
+      "m1_stale_as_current": 0.0,
+      "p1_error": 0.0,
+      "asof_correct": 100.0
+    }
+  },
+  "P2": {
+    "A": {
+      "first_party": 98.0,
+      "foreign_wins": 0.0,
+      "unknown": 2.0,
+      "other": 0.0,
+      "unparseable": 0.0,
+      "parse_fail_pct": 0.0,
+      "m2_first_party": 98.0,
+      "foreign_suppressed": 100.0,
+      "conflict_yes": 72.0
+    },
+    "B": {
+      "first_party": 100.0,
+      "foreign_wins": 0.0,
+      "unknown": 0.0,
+      "other": 0.0,
+      "unparseable": 0.0,
+      "parse_fail_pct": 0.0,
+      "m2_first_party": 100.0,
+      "foreign_suppressed": 100.0,
+      "conflict_yes": 72.0
+    },
+    "Bx": {
+      "first_party": 100.0,
+      "foreign_wins": 0.0,
+      "unknown": 0.0,
+      "other": 0.0,
+      "unparseable": 0.0,
+      "parse_fail_pct": 0.0,
+      "m2_first_party": 100.0,
+      "foreign_suppressed": 100.0,
+      "conflict_yes": 73.3
+    },
+    "C": {
+      "first_party": 100.0,
+      "foreign_wins": 0.0,
+      "unknown": 0.0,
+      "other": 0.0,
+      "unparseable": 0.0,
+      "parse_fail_pct": 0.0,
+      "m2_first_party": 100.0,
+      "foreign_suppressed": 100.0,
+      "conflict_yes": 58.7
+    }
+  },
+  "void": [],
+  "verdicts": {
+    "pre_V1": "M1(A)=58.0% \u2014 headroom OK (needs >= 16.2%)",
+    "pre_V2": "M2(A)=98.0% \u2014 headroom FAIL (needs <= 83.8%)",
+    "V1": "ANNOTATION BUNDLE REDUCES STALE-AS-CURRENT: 27.3pp >= 16.2pp (MDD 16.2pp @ N=150)",
+    "V2": "NOT TESTABLE at N=150 given observed base rate (MDD 16.2pp @ N=150)",
+    "V0_P1": "ANNOTATION CONTENT READ on P1 (as_of/delta channel): |B-Bx|=24.6pp >= 16.2pp (MDD 16.2pp @ N=150)",
+    "V0_P2": "no P2 bundle effect to attribute (V2 not validated) (MDD 16.2pp @ N=150)",
+    "V3a": "COMPILATION REDUCES STALE-AS-CURRENT (Enforcement per L3): 58.0pp >= 16.2pp (MDD 16.2pp @ N=150)",
+    "V3b": "NOT TESTABLE at N=150 given observed base rate (MDD 16.2pp @ N=150)",
+    "V4": "null does not fire \u2014 one or more legs NOT TESTABLE (headroom); V4 may not fire from an untestable leg (MDD 16.2pp @ N=150)",
+    "V5": "not triggered",
+    "V6": "not triggered",
+    "V7": "not triggered"
+  }
+}

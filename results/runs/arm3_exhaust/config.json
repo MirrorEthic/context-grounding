@@ -1,0 +1,21 @@
+{
+  "n_per_cell": 150,
+  "model": "grok-4.20-0309-non-reasoning",
+  "seed": 20260719,
+  "spec": "EXHAUST_PROBE_SPEC.md (arm 3, G1 Stage 1)",
+  "registry_hash": "e0283332b494530cc9bfc449e93eac799c5ad2980c4c2491cd354db07a01d1a9",
+  "cells": [
+    "Z0",
+    "A-lo",
+    "A-hi",
+    "X-hi",
+    "M-hi",
+    "M-hi-B",
+    "M-hi-C",
+    "A-hi-E",
+    "A-hi-N"
+  ],
+  "max_cross_role_token_spread_pct": 0.0,
+  "invariants_checked": true,
+  "started": "2026-07-17T18:32:26.514733-06:00"
+}

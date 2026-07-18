@@ -1,0 +1,7 @@
+{
+  "n": 150,
+  "model": "grok-4.20-0309-non-reasoning",
+  "seed": 20260717,
+  "spec": "GROUNDING_PROBE_SPEC.md",
+  "started": "2026-07-17T15:15:13.858251-06:00"
+}

@@ -1,0 +1,7 @@
+Copyright (c) 2026 Garret Sutherland, MirrorEthic LLC.
+
+Specs, results, and documentation: CC BY 4.0.
+Code (hologram/eval, hologram/okf, tests): Apache License 2.0.
+
+This repository is the OPEN METHOD layer. The hologram runtime (learned routing,
+MCP server, cortex-v2 memory engine, mesh) is proprietary and NOT licensed here.

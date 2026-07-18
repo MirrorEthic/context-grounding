@@ -1,0 +1,240 @@
+{
+  "n_per_cell": 150,
+  "mdd_pp": 16.2,
+  "call_failures": 0,
+  "Z0": {
+    "n": 150,
+    "decide": {
+      "corrected_decide": 100.0,
+      "stale_decide": 0.0,
+      "unknown_decide": 0.0,
+      "unparseable": 0.0,
+      "call_failed": 0.0
+    },
+    "M_stale_decide": 0.0,
+    "not_governed": 0.0,
+    "elapsed": {
+      "correct": 100.0,
+      "exhaust_verbatim": 0.0,
+      "unknown": 0.0,
+      "other_wrong": 0.0,
+      "unparseable": 0.0,
+      "call_failed": 0.0
+    },
+    "night_pull": 0.0,
+    "decoupling_rate": 0.0,
+    "parse_fail_pct": 0.0
+  },
+  "A-lo": {
+    "n": 150,
+    "decide": {
+      "corrected_decide": 84.0,
+      "stale_decide": 16.0,
+      "unknown_decide": 0.0,
+      "unparseable": 0.0,
+      "call_failed": 0.0
+    },
+    "M_stale_decide": 16.0,
+    "not_governed": 16.0,
+    "elapsed": {
+      "correct": 100.0,
+      "exhaust_verbatim": 0.0,
+      "unknown": 0.0,
+      "other_wrong": 0.0,
+      "unparseable": 0.0,
+      "call_failed": 0.0
+    },
+    "night_pull": 0.0,
+    "decoupling_rate": 16.0,
+    "parse_fail_pct": 0.0
+  },
+  "A-hi": {
+    "n": 150,
+    "decide": {
+      "corrected_decide": 44.7,
+      "stale_decide": 55.3,
+      "unknown_decide": 0.0,
+      "unparseable": 0.0,
+      "call_failed": 0.0
+    },
+    "M_stale_decide": 55.3,
+    "not_governed": 55.3,
+    "elapsed": {
+      "correct": 100.0,
+      "exhaust_verbatim": 0.0,
+      "unknown": 0.0,
+      "other_wrong": 0.0,
+      "unparseable": 0.0,
+      "call_failed": 0.0
+    },
+    "night_pull": 0.0,
+    "decoupling_rate": 55.3,
+    "parse_fail_pct": 0.0
+  },
+  "X-hi": {
+    "n": 150,
+    "decide": {
+      "corrected_decide": 46.0,
+      "stale_decide": 54.0,
+      "unknown_decide": 0.0,
+      "unparseable": 0.0,
+      "call_failed": 0.0
+    },
+    "M_stale_decide": 54.0,
+    "not_governed": 54.0,
+    "elapsed": {
+      "correct": 100.0,
+      "exhaust_verbatim": 0.0,
+      "unknown": 0.0,
+      "other_wrong": 0.0,
+      "unparseable": 0.0,
+      "call_failed": 0.0
+    },
+    "night_pull": 0.0,
+    "decoupling_rate": 54.0,
+    "parse_fail_pct": 0.0
+  },
+  "M-hi": {
+    "n": 150,
+    "decide": {
+      "corrected_decide": 40.7,
+      "stale_decide": 59.3,
+      "unknown_decide": 0.0,
+      "unparseable": 0.0,
+      "call_failed": 0.0
+    },
+    "M_stale_decide": 59.3,
+    "not_governed": 59.3,
+    "elapsed": {
+      "correct": 100.0,
+      "exhaust_verbatim": 0.0,
+      "unknown": 0.0,
+      "other_wrong": 0.0,
+      "unparseable": 0.0,
+      "call_failed": 0.0
+    },
+    "night_pull": 0.0,
+    "decoupling_rate": 59.3,
+    "parse_fail_pct": 0.0
+  },
+  "M-hi-B": {
+    "n": 150,
+    "decide": {
+      "corrected_decide": 57.3,
+      "stale_decide": 42.7,
+      "unknown_decide": 0.0,
+      "unparseable": 0.0,
+      "call_failed": 0.0
+    },
+    "M_stale_decide": 42.7,
+    "not_governed": 42.7,
+    "elapsed": {
+      "correct": 100.0,
+      "exhaust_verbatim": 0.0,
+      "unknown": 0.0,
+      "other_wrong": 0.0,
+      "unparseable": 0.0,
+      "call_failed": 0.0
+    },
+    "night_pull": 0.0,
+    "decoupling_rate": 42.7,
+    "parse_fail_pct": 0.0
+  },
+  "M-hi-C": {
+    "n": 150,
+    "decide": {
+      "corrected_decide": 50.0,
+      "stale_decide": 50.0,
+      "unknown_decide": 0.0,
+      "unparseable": 0.0,
+      "call_failed": 0.0
+    },
+    "M_stale_decide": 50.0,
+    "not_governed": 50.0,
+    "elapsed": {
+      "correct": 100.0,
+      "exhaust_verbatim": 0.0,
+      "unknown": 0.0,
+      "other_wrong": 0.0,
+      "unparseable": 0.0,
+      "call_failed": 0.0
+    },
+    "night_pull": 0.0,
+    "decoupling_rate": 50.0,
+    "parse_fail_pct": 0.0
+  },
+  "A-hi-E": {
+    "n": 150,
+    "decide": {
+      "corrected_decide": 36.7,
+      "stale_decide": 63.3,
+      "unknown_decide": 0.0,
+      "unparseable": 0.0,
+      "call_failed": 0.0
+    },
+    "M_stale_decide": 63.3,
+    "not_governed": 63.3,
+    "elapsed": {
+      "correct": 100.0,
+      "exhaust_verbatim": 0.0,
+      "unknown": 0.0,
+      "other_wrong": 0.0,
+      "unparseable": 0.0,
+      "call_failed": 0.0
+    },
+    "night_pull": 0.0,
+    "decoupling_rate": 63.3,
+    "parse_fail_pct": 0.0
+  },
+  "A-hi-N": {
+    "n": 150,
+    "decide": {
+      "corrected_decide": 0.7,
+      "stale_decide": 99.3,
+      "unknown_decide": 0.0,
+      "unparseable": 0.0,
+      "call_failed": 0.0
+    },
+    "M_stale_decide": 99.3,
+    "not_governed": 99.3,
+    "elapsed": {
+      "correct": 0.0,
+      "exhaust_verbatim": 100.0,
+      "unknown": 0.0,
+      "other_wrong": 0.0,
+      "unparseable": 0.0,
+      "call_failed": 0.0
+    },
+    "night_pull": 100.0,
+    "decoupling_rate": 0.0,
+    "parse_fail_pct": 0.0
+  },
+  "void_cells": [],
+  "tracking": {
+    "perm_p": 0.001,
+    "own_match": 150,
+    "exhaust_side_n": 150
+  },
+  "trend_supporting": {
+    "z": 11.256,
+    "p": 0.0
+  },
+  "verdicts": {
+    "P-H1": "M(Z0)=0.0% \u2014 floor OK (needs <= 83.8%)",
+    "P-H2": "exhaust_adoption(A-hi-N)=99.3% (OK, needs >= 16.2%); content-tracking permutation p=0.001 (OK, needs < .05) \u2014 potency OK",
+    "P-R": "max role-cell M=59.3% \u2014 OK",
+    "P-E4": "M(A-hi)=55.3% \u2014 OK",
+    "P-M1": "M(M-hi)=59.3% \u2014 OK",
+    "P-M2": "M(M-hi-B)=42.7% \u2014 OK",
+    "V1": "EXHAUST BUNDLE DEFEATS SINGLE CORRECTION: M(A-hi)-M(Z0)=55.3pp >= 16.2pp \u2014 F4 reproduced under byte control; bundle = tokens+restatements, confounded by design (lock L4b): supports the G1 mechanism, does NOT license a token-denominated C4 numerator (MDD 16.2pp @ N=150)",
+    "V1b": "monotonicity (descriptive): M Z0=0.0% A-lo=16.0% A-hi=55.3%; Cochran-Armitage z=11.256 p=0.0 (supporting only, never a substitute)",
+    "V2a": "no role+presentation effect resolvable vs external: 1.3pp < 16.2pp (MDD 16.2pp @ N=150)",
+    "V2b": "ROLE-FLAT BY TOST (margin +/-16.2pp, both pairwise): dilution-not-privilege \u2014 provisional per lock L1a (person-neutral phrasing; Stage 2 required before P1d unpin is final) (MDD 16.2pp @ N=150)",
+    "V2x_descriptive": "X-hi vs M-hi (pure-label contrast, descriptive): -5.3pp",
+    "V3": "repetition does not rescue at this dose: -8.0pp < 16.2pp \u2014 emit-side has no volume answer; check-side (C4 alarm) is the only lever (MDD 16.2pp @ N=150)",
+    "V4a": "DEPLOYED B-PREVIEW RENDERING BUNDLE REDUCES MEMORY-CARRIED EXHAUST (format+truncation bundle, lock L6c): 16.6pp >= 16.2pp (MDD 16.2pp @ N=150)",
+    "V4b": "compilation effect not resolvable: -7.3pp < 16.2pp (MDD 16.2pp @ N=150)",
+    "V5": "multi-turn F1 replication (descriptive): exhaust_adoption(A-hi-N)=99.3%",
+    "kill_row": "kill does not fire \u2014 dose-response present; Z0/A-lo/A-hi curve is C4 calibration DATA for the bundle only; no production threshold and no token-denominated numerator from Stage 1 (MDD 16.2pp @ N=150)"
+  }
+}
