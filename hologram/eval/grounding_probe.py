@@ -169,9 +169,19 @@ SYSTEM_PROMPT = ("You are an assistant continuing an ongoing work session. "
 # ── API ──────────────────────────────────────────────────────────────────────
 
 OPENAI_URL = 'https://api.openai.com/v1/chat/completions'
+OPENROUTER_URL = 'https://openrouter.ai/api/v1/chat/completions'
 
 
 def _provider(model: str) -> str:
+    # `vllm:<served-name>` routes a local vLLM OpenAI endpoint (TP=2 on the
+    # V100s) — the inspectable subject (returns the reasoning trace). Host via
+    # STAGE2_VLLM_URL env (default local-gpu-node LAN).
+    if model.startswith('vllm:'):
+        return 'vllm'
+    # `openrouter:<slug>` routes any OpenRouter model (breadth panel), e.g.
+    # 'openrouter:moonshotai/kimi-k2', 'openrouter:deepseek/deepseek-r1'.
+    if model.startswith('openrouter:'):
+        return 'openrouter'
     if model.startswith('grok'):
         return 'xai'
     if model.startswith('gemini'):
@@ -181,11 +191,22 @@ def _provider(model: str) -> str:
     return 'anthropic'
 
 
+def _or_slug(model: str) -> str:
+    return model.split(':', 1)[1] if model.startswith('openrouter:') else model
+
+
 _KEY_ENV = {'xai': 'GROK_API_KEY', 'google': 'GEMINI_API_KEY',
-            'openai': 'OPENAI_API_KEY', 'anthropic': 'ANTHROPIC_API_KEY'}
+            'openai': 'OPENAI_API_KEY', 'anthropic': 'ANTHROPIC_API_KEY',
+            'openrouter': 'OPENROUTER_API_KEY'}
+
+
+VLLM_URL = os.environ.get('STAGE2_VLLM_URL',
+                          'http://localhost:8001/v1/chat/completions')
 
 
 def load_api_key(model: str) -> str:
+    if _provider(model) == 'vllm':
+        return 'none'                      # local vLLM needs no auth
     env_name = _KEY_ENV[_provider(model)]
     key = os.environ.get(env_name, '')
     if not key and ENV_PATH.exists():
@@ -263,11 +284,47 @@ def call_model(client: httpx.Client, key: str, model: str, prompt: Optional[str]
         }
         headers = {'Authorization': f'Bearer {key}'}
         extract = lambda j: j['choices'][0]['message']['content']
+    elif _provider(model) == 'vllm':
+        # Local vLLM (TP=2) OpenAI-compatible. Returns the reasoning trace
+        # inline (R1-distill: content is the <think> chain + answer). No auth.
+        url = VLLM_URL
+        payload = {
+            'model': model.split(':', 1)[1], 'max_tokens': 4000, 'temperature': 0,
+            'messages': [{'role': 'system', 'content': system},
+                         *({'role': m['role'], 'content': m['content']}
+                           for m in messages)],
+        }
+        headers = {'content-type': 'application/json'}
+        extract = lambda j: j['choices'][0]['message']['content']
+    elif _provider(model) == 'openrouter':
+        # OpenAI-compatible; `openrouter:<slug>` picks the model. Generous
+        # budget (reasoning models spend it on thinking). `reasoning` asks OR to
+        # surface the trace where the upstream exposes it (breadth-panel bonus:
+        # some models return it, giving a partial trace channel for §7 without a
+        # local GPU); temperature omitted (many reasoning models reject it).
+        url = OPENROUTER_URL
+        payload = {
+            'model': _or_slug(model), 'max_tokens': 4000,
+            'reasoning': {'enabled': True},
+            'messages': [{'role': 'system', 'content': system},
+                         *({'role': m['role'], 'content': m['content']}
+                           for m in messages)],
+        }
+        headers = {'Authorization': f'Bearer {key}',
+                   'HTTP-Referer': 'https://mirrorethic.com',
+                   'X-Title': 'context-grounding'}
+        extract = lambda j: j['choices'][0]['message']['content']
     else:
+        # Anthropic. Newer models (Fable 5, Opus 4.8, Sonnet 5) DEPRECATE
+        # temperature (400 if sent); Haiku 4.5 accepts it. Omit it for all —
+        # default sampling, matches how the newer models expect to be called.
+        # Generous max_tokens so a reasoning preamble can't truncate the 3-line
+        # DECIDE/ELAPSED/DAYNIGHT answer.
         url = ANTHROPIC_URL
         payload = {
-            'model': model, 'max_tokens': 300, 'temperature': 0,
-            'system': system,
+            'model': model, 'max_tokens': 8192,   # Fable 5 thinks by default;
+            'system': system,                      # a 2000 cap truncated mid-think
+                                                   # → empty answer on complex probes
             'messages': [{'role': m['role'], 'content': m['content']}
                          for m in messages],
         }
@@ -277,7 +334,7 @@ def call_model(client: httpx.Client, key: str, model: str, prompt: Optional[str]
     # (214/450 exhausted-retries on the first gemini arm). OpenAI reasoning
     # models are slow → longer per-call timeout.
     attempts, base = (8, 5) if _provider(model) == 'google' else (4, 2)
-    call_timeout = 300 if _provider(model) == 'openai' else 120
+    call_timeout = 1200 if _provider(model) == 'vllm' else 300 if _provider(model) in ('openai', 'openrouter') else 120
     for attempt in range(attempts):
         try:
             r = client.post(url, json=payload, headers=headers, timeout=call_timeout)

@@ -571,8 +571,11 @@ def test_arm1_payload_bytes_frozen_xai_chat():
 
 
 def test_arm1_payload_bytes_frozen_anthropic():
+    # Updated payload: newer Claude models (Fable 5, Opus 4.8, Sonnet 5) reject a non-default
+    # `temperature` (400) and need generous max_tokens so a reasoning preamble can't truncate
+    # the answer. Anthropic branch omits temperature and sets max_tokens=8192.
     got = _payload('claude-sonnet-5', 'anthropic', prompt=PROMPT)
-    frozen = {'model': 'claude-sonnet-5', 'max_tokens': 300, 'temperature': 0,
+    frozen = {'model': 'claude-sonnet-5', 'max_tokens': 8192,
               'system': ARM1_SYSTEM_PROMPT,
               'messages': [{'role': 'user', 'content': PROMPT}]}
     assert json.dumps(got) == json.dumps(frozen)

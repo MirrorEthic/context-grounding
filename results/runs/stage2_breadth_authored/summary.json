@@ -1,0 +1,86 @@
+[
+  {
+    "model": "grok-4.5",
+    "n": 60,
+    "mdd_pp": 25.6,
+    "M": {
+      "Z0": 0.0,
+      "AUTH": 0.0,
+      "AUTH-N": 13.3
+    },
+    "fail_pct": 0.6,
+    "verdict": "re-grounds"
+  },
+  {
+    "model": "grok-4.20-0309-non-reasoning",
+    "n": 60,
+    "mdd_pp": 25.6,
+    "M": {
+      "Z0": 0.0,
+      "AUTH": 51.7,
+      "AUTH-N": 100.0
+    },
+    "fail_pct": 0.0,
+    "verdict": "DECOUPLES"
+  },
+  {
+    "model": "openrouter:deepseek/deepseek-r1",
+    "n": 60,
+    "mdd_pp": 25.6,
+    "M": {
+      "Z0": 0.0,
+      "AUTH": 0.0,
+      "AUTH-N": 13.3
+    },
+    "fail_pct": 7.2,
+    "verdict": "re-grounds"
+  },
+  {
+    "model": "openrouter:qwen/qwen3-30b-a3b-thinking-2507",
+    "n": 60,
+    "mdd_pp": 25.6,
+    "M": {
+      "Z0": 0.0,
+      "AUTH": 0.0,
+      "AUTH-N": 1.7
+    },
+    "fail_pct": 0.0,
+    "verdict": "re-grounds"
+  },
+  {
+    "model": "openrouter:moonshotai/kimi-k2",
+    "n": 60,
+    "mdd_pp": 25.6,
+    "M": {
+      "Z0": 0.0,
+      "AUTH": 0.0,
+      "AUTH-N": 78.3
+    },
+    "fail_pct": 3.3,
+    "verdict": "re-grounds"
+  },
+  {
+    "model": "openrouter:deepseek/deepseek-chat",
+    "n": 60,
+    "mdd_pp": 25.6,
+    "M": {
+      "Z0": 3.3,
+      "AUTH": 0.0,
+      "AUTH-N": 96.7
+    },
+    "fail_pct": 0.0,
+    "verdict": "re-grounds"
+  },
+  {
+    "model": "openrouter:meta-llama/llama-3.3-70b-instruct",
+    "n": 60,
+    "mdd_pp": 25.6,
+    "M": {
+      "Z0": 0.0,
+      "AUTH": 0.0,
+      "AUTH-N": 65.0
+    },
+    "fail_pct": 0.0,
+    "verdict": "re-grounds"
+  }
+]

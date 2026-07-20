@@ -11,10 +11,14 @@ that fact *controlling* behavior, across models and providers, with the nulls re
 
 ## What's here
 
-- `specs/` — the three frozen probe specifications (freeze timestamps + content-hash registries in-file).
-- `hologram/eval/` — the runnable probe harness (grounding / ingest / exhaust probes, parity instrument, C4 backfill).
+- `specs/` — frozen probe specifications (freeze timestamps + content-hash registries in-file):
+  grounding / ingest / exhaust (Stage 1) + `EXHAUST_PROBE_STAGE2_SPEC.md` and the registered
+  `VALUE_ANCHOR_BRIDGE_SPEC.md`.
+- `hologram/eval/` — the runnable probe harness (grounding / ingest / exhaust probes, the Stage-2
+  exhaust/mechanism/breadth/trace-showcase harness, the value-anchor bridge, parity, C4 backfill).
 - `hologram/okf/` — the OKF conformance method (temporal lint, C4 exhaust monitor, overlay, reader, report, memory-gate policy).
-- `results/` — `CROSS_PROVIDER_HARDENING.md` (the consolidated table) + `results/runs/` registered-run receipts (config + summary + raw `calls.jsonl.gz`).
+- `results/` — `CROSS_PROVIDER_HARDENING.md` (Stage-1 table), `STAGE2_RESULTS.md` (Stage-2 synthesis),
+  `local_traces/TRACES.md` (annotated re-derivation traces), + `results/runs/` registered-run receipts.
 - `docs/` — the full program (`CONTEXT_GROUNDING_PROGRAM.md`) and the session narrative.
 - `eval_fixtures/` — Google's public OKF sample bundles (the ingest test corpus).
 - `tests/` — 114 tests; the method + harness run standalone (no runtime dependency).
@@ -32,8 +36,9 @@ See **STATUS.md** for the resolved/open boundary and **CLAIM_LEDGER.md** for per
 
 ## Status
 
-Interim. Complete: Arm 1 (model-general), Arm 2 staleness, Arm 3 Stage-1. Open: Arm 3 Stage 2
-(self-generated exhaust — the load-bearing next experiment), authority-probe redesign, full
-raw + DOI release when the battery closes.
+Interim. Complete: Arm 1 (model-general), Arm 2 staleness, Arm 3 Stage-1, **Arm 3 Stage-2**
+(authored-exhaust breadth is grok-4.20-nr-specific; re-grounding mechanism = re-derivation, seen
+in local traces; Claude home turf). Open: *live* self-generated exhaust at agent scale, the
+registered **value-axis** result (held, budget-gated), authority-probe redesign, DOI release.
 
 Author: Garret Sutherland, MirrorEthic LLC. License: see LICENSE.

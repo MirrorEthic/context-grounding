@@ -1,0 +1,50 @@
+[
+  {
+    "model": "claude-fable-5",
+    "n": 60,
+    "mdd_pp": 25.6,
+    "M": {
+      "Z0": 0.0,
+      "AUTH": 0.0,
+      "AUTH-N": 0.0
+    },
+    "fail_pct": 100.0,
+    "verdict": "re-grounds"
+  },
+  {
+    "model": "claude-opus-4-8",
+    "n": 60,
+    "mdd_pp": 25.6,
+    "M": {
+      "Z0": 0.0,
+      "AUTH": 0.0,
+      "AUTH-N": 10.0
+    },
+    "fail_pct": 0.0,
+    "verdict": "re-grounds"
+  },
+  {
+    "model": "claude-sonnet-5",
+    "n": 60,
+    "mdd_pp": 25.6,
+    "M": {
+      "Z0": 0.0,
+      "AUTH": 0.0,
+      "AUTH-N": 0.0
+    },
+    "fail_pct": 0.0,
+    "verdict": "re-grounds"
+  },
+  {
+    "model": "claude-haiku-4-5-20251001",
+    "n": 60,
+    "mdd_pp": 25.6,
+    "M": {
+      "Z0": 0.0,
+      "AUTH": 0.0,
+      "AUTH-N": 51.7
+    },
+    "fail_pct": 0.0,
+    "verdict": "re-grounds"
+  }
+]

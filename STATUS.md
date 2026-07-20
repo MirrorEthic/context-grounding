@@ -20,20 +20,31 @@ is open. Nothing here is upgraded beyond what its evidence supports.
 - **Arm 3 — self-exhaust (G1 Stage 1), registered surface.** Six confident contradictory
   restatements defeat one corrected record **55.3%** of the time on grok-4.20-non-reasoning,
   while the model reports the corrected fact with **100% accuracy** (the decoupling result).
+- **Arm 3 — Stage 2 (authored-exhaust breadth + mechanism).** Across 11 models / 6 labs, the
+  correction-defeat is **grok-4.20-non-reasoning-specific** — every other model with measurable
+  authored-exhaust potency re-grounds to **~0% under one clear anchored correction**. Local
+  open-weights traces show the mechanism directly: **re-derivation from the anchored stamps**
+  (r1-7b 100% / r1-14b 85% of traces recompute). Claude home turf: Haiku re-grounds cleanly,
+  Fable 5 refuses the doctored transcript. Bound: many models have low authored-exhaust potency,
+  so several "0%" cells are not clean re-grounds — stated as such. See `results/STAGE2_RESULTS.md`.
 
 ## Complete but boundary-marking (the honest, load-bearing nulls)
 
 - **Arm 3 does not replicate to reasoning models by this method.** On gpt-5.6-sol and grok-4.5
   the *authored* exhaust never bound (pre-registered potency precondition failed) → **NOT
   TESTABLE**, a **method ceiling, not model immunity.** The 55.3% figure is bounded to the
-  non-reasoning + authored-exhaust surface. Consequence: **Stage 2 (self-generated exhaust)
-  is the load-bearing next experiment** — the only instrument that can test reasoners.
+  non-reasoning + authored-exhaust surface. **Stage 2 (this release) addressed this:** by serving
+  open-weights reasoners locally and coding the `<think>` trace, it tested reasoners directly and
+  found they **re-ground by re-derivation** — and that the decoupling is grok-4.20-nr-specific.
+  The remaining open piece is *live* self-generated exhaust at agent scale (see below).
 
 ## Not complete (open; released when closed)
 
-- Arm 3 **Stage 2** — live autoregressive self-generated exhaust (the marquee open arm).
+- Arm 3 Stage 2 — **true live autoregressive** self-generated exhaust at agent scale (authored-replay
+  + local mechanism are done this release; live self-generation is not).
+- **Value axis** — typed authority vs. value leakage (`specs/VALUE_ANCHOR_BRIDGE_SPEC.md`,
+  registered method only): result **held** pending a powered cross-model run.
 - Arm 2 **redesigned authority probe** (the P2 base-rate failure needs a harder conflict).
-- Provider replication of Arms 2 & 3 beyond grok+gpt (gemini rate-gated, dropped to optional).
 - Full raw analysis + DOI release: **after the complete battery closes.**
 
 ## The unified claim (what the three arms triangulate)
