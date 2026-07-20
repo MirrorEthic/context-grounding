@@ -103,5 +103,19 @@ repository as first-class findings, because a result you can't see the edges of 
 
 ---
 
+## Prior work
+
+Two papers by **Alex Kwon** predate this program and independently established several of its
+core results; we were unaware of them during development and credit them here as prior work.
+*Reclaim Evaluation: A Lossy Memory Is Worse Than an Empty One* (arXiv:2606.25449, June 2026)
+shows models confabulate rather than abstain when under-informed, re-emit stale conclusions once
+the work behind them is dropped, and recover only when the recomputable source is kept — and that
+typed annotation binds model-dependently while deterministic transformation drives the error to
+zero. *They Infer What You Meant* (arXiv:2607.03598, July 2026) articulates the
+representation-vs-behavioral-control decomposition this write-up leads with. Our claim ledger
+follows the structure of Kwon's Table 1.
+
+---
+
 *Companion repository (specs, harness, raw results, claim ledger):
 `github.com/MirrorEthic/context-grounding`. Independent research, MirrorEthic LLC.*

@@ -157,6 +157,29 @@ Lynch et al., *Agentic Misalignment in Summer 2026* (alignment.anthropic.com, 20
   with the workspace" — reads its own prior objections out of Slack and adopts them as stance.
   Nobody injected it. The hook can type what it injects; it cannot type what the agent *finds*.
 
+### Kwon (2026) — prior work this program reproduces and extends
+
+Two papers by **Alex Kwon** predate this program's v0.1 (2026-07-16) and independently established
+several of its core results. We were unaware of them during development; they are prior work, not
+concurrent, and are credited here after being raised in issue #1.
+
+- **Kwon, A. — *Reclaim Evaluation: A Lossy Memory Is Worse Than an Empty One*** (arXiv:2606.25449,
+  v1 2026-06-24). Induced-drift correction/recovery testing. Establishes ahead of us: models emit
+  confident errors rather than abstaining when under-informed (our ledger row 4); a kept-but-stale
+  conclusion is re-emitted as current once the work behind it is dropped (rows 5, 10); a correction
+  can be present yet fail to take when the basis for re-deriving it is gone — the "source-first"
+  recovery (keep the recomputable source, drop the re-derivable conclusion) is the same
+  anchor/re-derivation mechanism we probe (rows 8, 13; the SELF-SS cell); typed annotation binds
+  **model-dependently** (row 6); deterministic transformation drives the error to zero (row 8).
+- **Kwon, A. — *They Infer What You Meant: Models Represent Communicative Intent More Reliably Than
+  They Act On It*** (arXiv:2607.03598, v1 2026-07-03). Articulates the **representation-vs-
+  behavioral-control** decomposition — a model reliably represents/reports information while its
+  behavior fails to be governed by it ("the failure is one of readout on top of a robust
+  representation"). That is the decomposition this program leads with.
+
+`CLAIM_LEDGER.md`'s per-claim, evidence-tagged, epistemic-status structure follows Kwon's Table 1
+(*Reclaim Evaluation*) in purpose and form; see the note there. Both papers are CC BY 4.0.
+
 ---
 
 ## 4. Emit-side spec (both surfaces) — Queued

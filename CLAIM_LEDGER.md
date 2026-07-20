@@ -5,6 +5,10 @@ run, resolving power stated) / **Bounded** (validated on a stated surface, does 
 by the tested method) / **Not testable** (precondition failed — reported, never spun) /
 **Open** (queued). MDD = 16.2pp at N=150 unless noted.
 
+> This per-claim, evidence-tagged, epistemic-status ledger follows the structure of Table 1 in
+> Alex Kwon, *Reclaim Evaluation: A Lossy Memory Is Worse Than an Empty One* (arXiv:2606.25449,
+> 2026), prior work we credit for the form. See `docs/CONTEXT_GROUNDING_PROGRAM.md` §3.
+
 | # | Claim | Status | Evidence | Bound |
 |---|---|---|---|---|
 | 1 | Missing temporal structure → confabulation; anchored+typed emission eliminates it | **Validated** | Arm 1, cond A 100%→ B 0% error, 5 subjects/3 providers | single-turn |
