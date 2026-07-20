@@ -173,9 +173,9 @@ OPENROUTER_URL = 'https://openrouter.ai/api/v1/chat/completions'
 
 
 def _provider(model: str) -> str:
-    # `vllm:<served-name>` routes a local vLLM OpenAI endpoint (TP=2 on the
-    # V100s) — the inspectable subject (returns the reasoning trace). Host via
-    # STAGE2_VLLM_URL env (default local-gpu-node LAN).
+    # `vllm:<served-name>` routes a local vLLM OpenAI endpoint (TP=2) — the
+    # inspectable subject (returns the reasoning trace). Set the host via the
+    # STAGE2_VLLM_URL env var.
     if model.startswith('vllm:'):
         return 'vllm'
     # `openrouter:<slug>` routes any OpenRouter model (breadth panel), e.g.

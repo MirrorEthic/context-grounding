@@ -2,7 +2,7 @@
 Harness parity — the credibility instrument for cross-node experiment data.
 
 A node's grounding data is only credible if that node's harness behaves 1:1
-with the canonical (node) harness the registered arms were derived on.
+with the canonical harness the registered arms were derived on.
 "1:1" is layered:
 
   LAYER A — grounding/scoring logic (hologram.okf lint/memory_gate/c4): pure,

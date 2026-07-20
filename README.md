@@ -19,7 +19,7 @@ that fact *controlling* behavior, across models and providers, with the nulls re
 - `hologram/okf/` — the OKF conformance method (temporal lint, C4 exhaust monitor, overlay, reader, report, memory-gate policy).
 - `results/` — `CROSS_PROVIDER_HARDENING.md` (Stage-1 table), `STAGE2_RESULTS.md` (Stage-2 synthesis),
   `local_traces/TRACES.md` (annotated re-derivation traces), + `results/runs/` registered-run receipts.
-- `docs/` — the full program (`CONTEXT_GROUNDING_PROGRAM.md`) and the session narrative.
+- `docs/` — the full program (`CONTEXT_GROUNDING_PROGRAM.md`).
 - `eval_fixtures/` — Google's public OKF sample bundles (the ingest test corpus).
 - `tests/` — 114 tests; the method + harness run standalone (no runtime dependency).
 

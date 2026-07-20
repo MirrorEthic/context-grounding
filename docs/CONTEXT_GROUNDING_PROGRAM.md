@@ -85,8 +85,8 @@ a sign-off. Low-constraint regions are where untyped priors fill the space.
 
 A second worked example, on a **Claude-family** surface, with a twist the reference case
 did not have. A claude.ai chat instance (Claude Fable 5) had this program's own session
-documents uploaded (SESSION_EXPLAINER, RESEARCH_WORKLOG, incident report — all dense with
-*node-claude's* ~15h session temporal spans).
+documents uploaded (a session narrative, work log, and incident report — all dense with
+*another agent's* ~15h session temporal spans).
 
 **Observed (what the operator witnessed — this is the data):**
 - **N1 — document-level F1.** The instance treated itself as being in a "long, dense
